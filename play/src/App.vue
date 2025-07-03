@@ -1,11 +1,11 @@
 <script setup lang="ts">
+import Icon from '@zi-shui/components/icon/src/icon.vue'
+console.log(Icon);
 
 </script>
 
 <template>
-  <div>
-    ceshi
-  </div>
+  <!-- <Icon :color="" :size=""/> -->
 </template>
 
 <style scoped>

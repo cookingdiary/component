@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "pnpm -C play dev"
-
   },
   "keywords": [],
   "author": "",
@@ -17,5 +16,8 @@
     "@zi-shui/utils": "workspace:^",
     "typescript": "^4.7.4",
     "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "unplugin-vue-define-options": "0.6.2"
   }
 }
