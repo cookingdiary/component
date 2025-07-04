@@ -8,7 +8,7 @@ export function withInstall<T>(comp:T){
         const { name } = comp as unknown as {name:string}
         app.component(name,comp)
     }
-    return comp
+    return comp as SFCWithInstall<T>
 }
 const Icon = withInstall(_Icon)
 
