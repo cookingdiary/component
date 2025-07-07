@@ -1,18 +1,16 @@
 //整合导出组件
-import { Plugin } from 'vue'
 import _Icon from './src/icon.vue'
+import { withInstall } from '@zi-shui/utils/with-install'
 
-export type SFCWithInstall<T> = T & Plugin
-export function withInstall<T>(comp:T){
-    (comp as SFCWithInstall<T>).install = function(app){
-        const { name } = comp as unknown as {name:string}
-        app.component(name,comp)
-    }
-    return comp as SFCWithInstall<T>
-}
 const Icon = withInstall(_Icon)
+console.log(Icon)
 
 export default Icon
-
-
 export * from './src/icon'
+
+declare module 'vue' {
+  export interface GlobalComponents {
+    //接口可以自动合并
+    ZIcon: typeof Icon
+  }
+}

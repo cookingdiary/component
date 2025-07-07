@@ -1,0 +1,40 @@
+import { defineConfig } from 'eslint/config';
+import vuePlugin from 'eslint-plugin-vue';
+import typescriptEslintParser from '@typescript-eslint/parser';
+import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin';
+
+export default defineConfig([
+  {
+    files: ['**/*.js', '**/*.ts', '**/*.vue'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      parser: typescriptEslintParser,
+      globals: {
+        defineProps: 'readonly',
+        defineEmits: 'readonly',
+        defineExpose: 'readonly',
+        withDefaults: 'readonly'
+      }
+    },
+    plugins: {
+      vue: vuePlugin,
+      '@typescript-eslint': typescriptEslintPlugin
+    },
+    extends: [
+      'plugin:vue/vue3-recommended',
+      '@vue/typescript/recommended',
+      'eslint:recommended',
+      'plugin:@typescript-eslint/recommended'
+    ],
+    rules: {
+      'vue/html-self-closing': 'off',
+      'vue/max-attributes-per-line': 'off',
+      'vue/singleline-html-element-content-newline': 'off',
+      'vue/multi-word-component-names': 'off'
+    }
+  }
+]);
+
+
+
