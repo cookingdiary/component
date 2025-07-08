@@ -5,3 +5,5 @@ dist
 epg/version
 .iml
 .idea
+# 忽略 VitePress 缓存目录
+docs/.vitepress/cache/
