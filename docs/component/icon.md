@@ -14,6 +14,16 @@ $ pnpm install @vicons/ionicons5
 import { CashOutline } from '@vicons/ionicons5'
 </script>
 
+<z-icon color="red" size="40">
+    <CashOutline />
+  </z-icon>
+
+<z-icon color="green" size="40">
+    <CashOutline />
+</z-icon>
+
+
+```vue
 <template>
   <ZIcon color="red" size="40">
     <CashOutline />

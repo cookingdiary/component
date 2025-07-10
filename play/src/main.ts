@@ -3,13 +3,15 @@ import './style.css'
 import App from './App.vue'
 
 import Icon from '@zi-shui/components/icon'
+import Tree from '@zi-shui/components/tree'
 import '@zi-shui/theme-chalk/src/index.scss'
 
 const plugins = [
-    Icon
+    Icon,
+    Tree
 ]
 const app = createApp(App)
 plugins.forEach(plugin => app.use(plugin));
 
-// createApp(App).mount('#app') 
+// createApp(App).mount( '#app') 
 app.mount('#app')   
