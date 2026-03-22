@@ -10,7 +10,7 @@
 
 @mixin when($state){
     @at-root{
-        &.#{$state-prefix + $state} {
+        &.#{$state-separator + $state} {
             @content;
         }
     }
@@ -32,4 +32,10 @@
             @content;
         }
     }
+}
+
+@mixin button-variant($color,$background-color,$border-color) {
+    color:$color;
+    background: $background-color;
+    border-color: $border-color;
 }

@@ -35,7 +35,6 @@ function createBEM(prefixName: string) {
 export function createNameSpace(name: string) {
     const prefixName = `z-${name}`;
     return createBEM(prefixName);
-
 }
 // const bem = createNameSpace('icon')
 // console.log(bem.b('test')); // z-icon-test__icon--active
